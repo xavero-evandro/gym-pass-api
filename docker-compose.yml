@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    api-solid-db:
+      image: bitnami/postgresql
+      container_name: api-solid-db
+      environment:
+        - POSTGRESQL_USERNAME=xavero
+        - POSTGRESQL_PASSWORD=xavero123456
+        - POSTGRESQL_DATABASE=apisolid
+      ports:
+        - 5432:5432
