@@ -11,7 +11,7 @@ export class PrismaUsersRepository implements UsersRepository {
         return user
     }
 
-    async findUniqueEmail(email: string) {
+    async findByEmail(email: string) {
         const userWithEmailAlreadyExists = await prisma.user.findUnique({
             where: {
                 email

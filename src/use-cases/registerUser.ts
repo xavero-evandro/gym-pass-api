@@ -17,7 +17,7 @@ export class RegisterUser {
     constructor(private userRepository: UsersRepository) {}
 
     async execute({ name, email, password }: RegisterUserRequest): Promise<RegisterUserResponse> {
-        const userWithEmailAlreadyExists = await this.userRepository.findUniqueEmail(email)
+        const userWithEmailAlreadyExists = await this.userRepository.findByEmail(email)
 
         if (userWithEmailAlreadyExists) {
             throw new UserAlreadyExistsError()
