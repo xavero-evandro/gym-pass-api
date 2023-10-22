@@ -13,7 +13,7 @@ describe('FetchNearbyGyms', () => {
     })
 
     it('should return nearby gyms', async () => {
-        const { token } = await createAndAuthenticateUser(app)
+        const { token } = await createAndAuthenticateUser(app, 'ADMIN')
 
         await request(app.server)
             .post('/gyms')
