@@ -1,3 +1,4 @@
+import { GymAlreadyExistsError } from '@/use-cases/errors/gym-already-exists-error'
 import { makeCreateGym } from '@/use-cases/factories/make-create-gym'
 import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
@@ -20,7 +21,7 @@ export async function createGym(request: FastifyRequest, reply: FastifyReply) {
     try {
         const createGym = makeCreateGym()
 
-        const createdGym = await createGym.execute({
+        await createGym.execute({
             title,
             description,
             phone,

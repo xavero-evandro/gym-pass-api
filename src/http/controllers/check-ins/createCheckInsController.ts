@@ -17,7 +17,7 @@ export async function createCheckIn(request: FastifyRequest, reply: FastifyReply
 
     const createCheckIn = makeCheckIn()
 
-    const { checkIn } = await createCheckIn.execute({
+    await createCheckIn.execute({
         userId: request.user.sub,
         gymId,
         userLatitude: latitude,
