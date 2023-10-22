@@ -19,12 +19,12 @@
 - [x] user should not do 2 check-ins in the same gym in the same day
 - [x] user should not do check-in in a gym that is 100m away from him
 - [x] check-in could be validated until 20min after the check-in has been created
-- [ ] check-in could be validated only by the admin user
-- [ ] Gym should be registered from a admin user
+- [x] check-in could be validated only by the admin user
+- [x] Gym should be registered from a admin user
 
 ## Non-functional requirements
 
 - [x] user password should be encrypted
 - [x] api data should be persisted with a Postgres database
 - [x] all data list should be paginated with 20 items per page
-- [ ] User should be identified by a JWT token
+- [x] User should be identified by a JWT token
