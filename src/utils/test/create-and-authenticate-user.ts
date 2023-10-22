@@ -1,4 +1,3 @@
-import { app } from '@/app'
 import { prisma } from '@/lib/prisma'
 import { hash } from 'bcryptjs'
 import { FastifyInstance } from 'fastify'
